@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+  <link rel="stylesheet" href="{% static 'primarystyle.css' %}">
+</head>
+<body>
+
+<div class="header">
+  <h1 class="headertext border" >Airplanes</h1>
+</div>
+
+<ul>
+  {% for airplane in myairplanes %}
+    <li class="bodytext">airplane {{ airplane.id }}, passengers: {{ airplane.currentPassengerCount }}/{{ airplane.maxPassenger }}, size: {{ airplane.size }},
+      associated airline: 
+      {% if airplane.airline_set.exists %}
+        {% for airline in airplane.airline_set.all %}
+          {{ airline.name }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+      {% else %}
+        None
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+<a href="/addairplane">
+  <i class="glyphicon glyphicon-plus"></i>
+</a>
+<br>
+<a href="/deleteairplane">
+  <i class="glyphicon glyphicon-trash"></i>
+</a>
+<br>
+<br>
+<br>
+
+<div class="footer">
+  <p class="bodytext"><a class="bodytext" href="/">home</a></p>
+</div>
+
+</body>
+</html>

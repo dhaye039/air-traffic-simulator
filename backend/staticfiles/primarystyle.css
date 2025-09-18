@@ -1,0 +1,193 @@
+/*
+whenever you change this you have to run:
+    `python manage.py collectstatic` in the terminal
+*/
+
+:root {
+    --bgcolor: rgb(234, 250, 255);
+    --darkerbgcolor: rgb(213, 232, 243);
+    --txtcolor: rgb(0, 71, 134);
+    --darkertxtcolor: rgb(0, 44, 82);
+    --primarycolor: rgb(255, 94, 0);
+}
+
+body 
+{
+    position: relative;
+    text-align: center;
+    background-color: var(--bgcolor);
+}
+
+h1 
+{
+    color: var(--txtcolor);
+    width: 450px;
+    margin: auto;
+    /*margin-left: 20px;*/
+}
+
+h2
+{
+    color: var(--txtcolor);
+    width: 250px;
+    margin: auto;
+    /*margin-left: 20px;*/
+}
+
+body .header
+{
+    background-color: var(--darkerbgcolor);
+    padding: 20px;
+    text-align: center;
+}
+
+.dropdown-bar
+{
+    width: 100%;
+    background-color: var(--darkerbgcolor);
+}
+
+.dropdown 
+{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: var(--darkerbgcolor);
+    /* min-width: 180px; */
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 16px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+body .footer 
+{
+    background-color: var(--darkerbgcolor);
+    text-align: center;
+    padding: 20px;
+}
+
+.border
+{
+    border-bottom: 8px solid var(--primarycolor);
+    border-radius: 6px;
+}
+
+.bodytext
+{
+    color: var(--darkertxtcolor);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+.headertext
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.airplane-super-cool-trustmebro
+{
+    position: fixed;
+    left: 1600px;
+    width: 10px;
+    padding: 10px;
+    animation-name: slide;
+    animation-duration: 2.5s;
+}
+
+@keyframes slide {
+    from {left: 0px;}
+    to {left: 1600px;}
+}
+
+/* form styles-------------------------------------------------------- */
+input
+{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    /* box-sizing: border-box; */
+    background-color: var(--darkerbgcolor);
+    color: var(--darkertxtcolor);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    border: none;
+    border-bottom: 4px solid var(--primarycolor);
+}
+
+form label
+{
+    color: var(--darkertxtcolor);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+form ul
+{
+    color: var(--primarycolor);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+form button
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    background-color: var(--primarycolor);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+}
+
+form button:hover, form button:active
+{
+    background-color: white;
+    border: 2px var(--primarycolor);
+    color: var(--darkertxtcolor);
+    cursor:pointer
+}
+
+/* link styles--------------------------------------------------------*/
+
+a:link, a:visited 
+{
+    background-color: var(--primarycolor);
+    color: white;
+    border: 2px var(--primarycolor);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active 
+{
+    background-color: white;
+    border: 2px var(--primarycolor);
+    color: var(--darkertxtcolor);
+}
+
+/* select tag styles---------------------------------------------------*/
+select
+{
+    background-color: var(--darkerbgcolor);
+    color: var(--darkertxtcolor);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    border: 2px var(--primarycolor);
+    border-radius: 4px;
+
+    scrollbar-color: var(--primarycolor);
+}
+
+select::-webkit-scrollbar-track {
+    background: var(--primarycolor); /* scrollbar background */
+}

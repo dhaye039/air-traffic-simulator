@@ -4,6 +4,9 @@
 ### Developer: Team
 ### Security Administrator: Jonas Stamper
 
+# What's New?
+Check out the most recent video demonstration of the project here: https://github.com/bjucps420/fall-2024-project-d-j-3/wiki/Sprint-Videos
+
 # Identify which features are operational:
 
 - User accounts with 3+ levels of access -done
@@ -27,4 +30,3 @@
 - - TOO_SMALL_GATE -done
 - - TOO_SMALL_RUNWAY -done
 - Security: SQL injection, cross site request forgery, ports, unauthorized access, access elevation, weak passwords, debugging information, endpoints, installed packages -mostly all done
-

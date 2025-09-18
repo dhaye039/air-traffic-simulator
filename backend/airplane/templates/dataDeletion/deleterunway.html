@@ -1,0 +1,32 @@
+<!-- deleterunway.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Delete Runway </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="{% static 'primarystyle.css' %}">
+</head>
+
+<div class="header">
+    <h1 class="headertext border" >Delete Runway by ID#</h1>
+</div>
+
+<body>
+    <p class="bodytext">{{ msg }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <input id="runway_id" type="text" name="runway_id">
+        <button type="submit">Delete Runway</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+</body>
+
+<div class="footer">
+    <p class="bodytext"><a class="bodytext" href="/runwaydisplay">back</a></p>
+</div>
+
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+  <link rel="stylesheet" href="{% static 'primarystyle.css' %}">
+</head>
+<body>
+
+<div class="header">
+  <h1 class="headertext border" >Gates</h1>
+</div>
+
+<ul>
+  {% for gate in mygates %}
+    <li class="bodytext">gate {{ gate.id }}, size: {{ gate.size }},
+      associated airport: 
+      {% if gate.airport_set.exists %}
+        {% for airport in gate.airport_set.all %}
+          {{ airport.name }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+      {% else %}
+        None
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+<a href="/addgate">
+  <i class="glyphicon glyphicon-plus"></i>
+</a>
+<br>
+<a href="/deletegate">
+  <i class="glyphicon glyphicon-trash"></i>
+</a>
+<br>
+<br>
+<br>
+
+<div class="footer">
+  <p class="bodytext"><a class="bodytext" href="/">home</a></p>
+</div>
+
+</body>
+</html>
