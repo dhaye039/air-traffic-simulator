@@ -1,0 +1,31 @@
+<!-- addairport.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Add Airport </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="{% static 'primarystyle.css' %}">
+</head>
+
+<div class="header">
+    <h1 class="headertext border" >Add a New Airport</h1>
+</div>
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Airport</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+</body>
+
+<div class="footer">
+    <p class="bodytext"><a class="bodytext" href="/airportdisplay">back</a></p>
+</div>
+
+</html>
